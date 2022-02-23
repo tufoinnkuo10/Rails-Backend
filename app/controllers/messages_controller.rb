@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
 
-    render json: @messages, only: [ :id, :description]
+    render json: @messages, only: [ :description]
   end
 
   # GET /messages/1
