@@ -3,7 +3,8 @@ class MessagesController < ApplicationController
 
   # GET /messages
   def index
-    @messages = Message.all
+    @messages = Message.find(Message.pluck(:id).sample)
+
 
     render json: @messages, only: [ :description]
   end
